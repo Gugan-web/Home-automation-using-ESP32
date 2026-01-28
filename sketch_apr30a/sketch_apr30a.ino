@@ -2,9 +2,9 @@
 
 /* Fill-in your Template ID (only if using Blynk.Cloud) */
 //#define BLYNK_TEMPLATE_ID   "YourTemplateID"
-#define BLYNK_TEMPLATE_ID "TMPL3oNyTfNrf"
+#define BLYNK_TEMPLATE_ID ""
 #define BLYNK_TEMPLATE_NAME "Home Automation"
-#define BLYNK_AUTH_TOKEN "QaXgdJm9fll4pbSwRKjkk_a1s42DiEvh"
+#define BLYNK_AUTH_TOKEN "YourAuthToken"
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
