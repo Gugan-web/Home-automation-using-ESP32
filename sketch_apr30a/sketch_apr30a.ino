@@ -15,8 +15,8 @@ char auth[] = BLYNK_AUTH_TOKEN;
 
 // Your WiFi credentials. 
 // Set password to "" for open networks.
-char ssid[] = "poco";
-char pass[] = "12345678";
+char ssid[] = "enter name of your wifi";
+char pass[] = "enter password of your wifi";
 
 void setup()
 {
