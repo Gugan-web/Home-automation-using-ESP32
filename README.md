@@ -1,38 +1,57 @@
 # Home Automation System Using ESP32 + Blynk IoT
 
-<p align="center">
+<div align="center">
   <img src="HomeAutomation.png" alt="Home Automation System" width="900" />
+</div>
+
+<p align="center">
+  <a href="#overview"><img src="https://img.shields.io/badge/ESP32-Home%20Automation-00A6FB?style=for-the-badge&logo=arduino&logoColor=white" alt="ESP32 Home Automation" /></a>
+  <a href="#features"><img src="https://img.shields.io/badge/Blynk-IoT-5C6BC0?style=for-the-badge&logo=blynk&logoColor=white" alt="Blynk IoT" /></a>
+  <a href="#getting-started"><img src="https://img.shields.io/badge/Status-Prototype-22C55E?style=for-the-badge" alt="Prototype Status" /></a>
 </p>
 
-A smart home automation project built to monitor and control devices such as lights, fans, and power plugs remotely through a mobile application. The system uses a Wi-Fi-enabled microcontroller with Blynk IoT to provide an easy and scalable home automation interface.
+A smart home automation project that allows users to control household appliances remotely using a mobile app. This project connects an ESP32 microcontroller to relays and uses the Blynk IoT platform for wireless control and monitoring.
 
 ## Overview
 
-This project demonstrates how to create a low-cost home automation system that allows users to:
+This system is designed to automate common home devices such as lights, fans, and power plugs. The ESP32 acts as the central controller, while Blynk provides a user-friendly interface for remote ON/OFF control through a smartphone.
 
-- Turn appliances ON/OFF remotely
-- Control devices through a smartphone app
-- Use a relay-based switching mechanism
-- Integrate with IoT for remote access and monitoring
-- Expand the design for more rooms, appliances, and sensors
+The project is ideal for learning IoT, embedded systems, home automation, and relay-based control logic.
+
+## System Architecture
+
+```mermaid
+flowchart LR
+    A[User] --> B[Blynk Mobile App]
+    B --> C[Wi-Fi Network]
+    C --> D[ESP32 Controller]
+    D --> E[Relay Module]
+    E --> F[Home Appliances]
+```
 
 ## Features
 
-- Wi-Fi-based device control
-- Simple mobile control using Blynk
-- Relay-driven switching for home appliances
-- Expandable code structure for more modules
-- Suitable for prototype and learning projects
+- Remote control of appliances using a smartphone
+- Wi-Fi-based connectivity with ESP32
+- Blynk IoT integration for mobile automation
+- Simple relay-based switching system
+- Easy to expand with more appliances and sensors
+- Suitable as a learning and prototype project
 
-## Hardware Concept
+## Hardware Components
 
-The system includes:
+- ESP32 microcontroller
+- Relay module
+- Household appliances such as lights, fans, and plugs
+- Wi-Fi router / internet connectivity
+- Blynk mobile application
 
-- ESP32 / Wi-Fi-enabled microcontroller
-- Relay module for appliance switching
-- Home appliances such as lights, fans, and plugs
-- Blynk mobile app for remote control
-- Internet connectivity through Wi-Fi
+## Project Gallery
+
+<div align="center">
+  <img src="ON%20state.jpeg" alt="Appliance ON state" width="420" />
+  <img src="OFF%20state.jpeg" alt="Appliance OFF state" width="420" />
+</div>
 
 ## Repository Structure
 
@@ -45,48 +64,78 @@ Home-automation-using-ESP32/
 ├── DOC-20250514-WA0005..pdf
 ├── HA ppt final for pdf.pdf
 ├── firmware/
+│   ├── README.md
 │   └── sketch_apr30a.ino
 ├── docs/
 │   └── README.md
 ├── sketch_apr30a/
-│   └── sketch_apr30a.ino   # Legacy original project source
+│   └── sketch_apr30a.ino
 └── .gitignore
 ```
 
-## Project Status
-
-This project is a prototype and educational implementation designed for learning and experimentation. It is a good starting point for building a more advanced smart home automation system with additional sensors, scheduling, and automation rules.
-
-## Device States
-
-<p align="center">
-  <img src="ON%20state.jpeg" alt="Appliance ON state" width="420" />
-  <img src="OFF%20state.jpeg" alt="Appliance OFF state" width="420" />
-</p>
-
 ## Getting Started
 
-1. Open the Arduino sketch in `firmware/sketch_apr30a.ino`.
-2. Update your Wi-Fi credentials and Blynk authentication details.
-3. Upload the code to your ESP32/ESP8266-compatible board.
-4. Open the Blynk app and configure the buttons for your devices.
-5. Test the ON/OFF switching for your appliances.
+### Prerequisites
+
+- Arduino IDE
+- ESP32 board support package installed
+- Blynk app installed on your device
+- Wi-Fi network credentials
+- Relay module and basic wiring accessories
+
+### Steps
+
+1. Open the firmware file in `firmware/sketch_apr30a.ino`.
+2. Replace the Wi-Fi SSID and password with your own network details.
+3. Add the correct Blynk authentication token.
+4. Connect the ESP32 to the relay circuit and appliances.
+5. Upload the code to the ESP32 board.
+6. Open the Blynk app and control the devices.
+
+## Configuration Example
+
+Update the following values before uploading:
+
+```cpp
+char ssid[] = "your_wifi_name";
+char pass[] = "your_wifi_password";
+#define BLYNK_AUTH_TOKEN "your_auth_token"
+```
+
+Also ensure the relay pin assignments match your actual hardware wiring.
 
 ## Important Notes
 
-- Ensure the correct GPIO pins are assigned in the code.
-- Use your own Wi-Fi SSID and password.
-- Set the correct Blynk authentication token and template values.
-- The project is designed as a learning prototype and can be extended for real-world use.
+- Verify the correct GPIO pins before deployment.
+- Use a stable power source for the relay board and ESP32.
+- This project is intended for educational and prototype use.
+- For real-world deployment, add fuse protection, isolation, and safety checks.
 
 ## Documentation
 
-Project documents and presentation files are included in the repository for reference and understanding.
+Reference documents and project files are included in the repository:
+
+- `DOC-20250514-WA0005..pdf`
+- `HA ppt final for pdf.pdf`
+
+## Future Enhancements
+
+This system can be expanded with:
+
+- Multiple relay channels
+- Motion and temperature sensors
+- Scheduled automation
+- Energy monitoring
+- Notifications and alerts
+- Web dashboard support
 
 ## License
 
-This project is intended for learning and personal use. Please make sure to credit the original author if you reuse or adapt this work.
+This project is intended for academic, educational, and personal use. Please give proper credit if you reuse or adapt the design.
 
 ---
 
-Built for smart home learning and IoT experimentation.
+<p align="center">
+  <strong>Built for smart-home learning, IoT experimentation, and embedded systems exploration.</strong>
+</p>
+
