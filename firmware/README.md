@@ -1,11 +1,14 @@
-# Firmware
+# Project Documentation
 
-This folder contains the main Arduino firmware for the home automation project.
+This folder contains supporting project documents and reference material related to the home automation system.
 
-## Source File
+## Included References
 
-- `sketch_apr30a.ino`
+- Report PDF
+- Presentation PDF
+- Design and implementation notes
 
-## Notes
+## Purpose
 
-This file is the active working version of the project firmware. Update the Wi-Fi credentials and Blynk authentication settings before uploading to the microcontroller.
+These files help explain the logic, hardware setup, and project flow behind the smart home automation prototype.
+

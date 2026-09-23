@@ -20,12 +20,8 @@ char pass[] = "enter password of your wifi";
 
 void setup()
 {
-  // Debug console
   Serial.begin(9600);
-
   Blynk.begin(auth, ssid, pass);
-  // You can also specify server:
-  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80);
 }
 
 void loop()
